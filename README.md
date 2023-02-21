@@ -1,2 +1,2 @@
-# api_final
+# Социальная сеть Yatube через API:
 api final
