@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 from rest_framework.validators import UniqueTogetherValidator
+from django.core.exceptions import FieldDoesNotExist, ValidationError
 
 from posts.models import Comment, Follow, Group, Post, User
 
@@ -53,13 +54,8 @@ class FollowSerializer(serializers.ModelSerializer):
         ]
 
     def validate(self, data):
-        """
-        Проверка, что пользователь и автор - это разные люди.
-        """
-        print(data, data['following'])
-        print(self.__dict__)
-        print(self.context['request'].user)
+        """Проверка, что пользователь и автор - это разные люди."""
         if data['following'] == self.context['request'].user:
-            raise serializers.ValidationError(
+            raise ValidationError(
                 "Не допустимо подписываться самому к себе")
         return data
