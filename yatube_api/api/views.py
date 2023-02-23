@@ -1,4 +1,3 @@
-from django.core.exceptions import BadRequest
 from django.shortcuts import get_object_or_404
 from rest_framework import filters, viewsets
 from rest_framework.pagination import LimitOffsetPagination
@@ -55,6 +54,4 @@ class FollowViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         author = get_object_or_404(
             User, username=self.request.data.get('following'))
-        if author == self.request.user:
-            raise BadRequest('Не допустимо подписываться самому к себе')
         serializer.save(user=self.request.user, following=author)

@@ -51,3 +51,15 @@ class FollowSerializer(serializers.ModelSerializer):
                 fields=('user', 'following')
             )
         ]
+
+    def validate(self, data):
+        """
+        Проверка, что пользователь и автор - это разные люди.
+        """
+        print(data, data['following'])
+        print(self.__dict__)
+        print(self.context['request'].user)
+        if data['following'] == self.context['request'].user:
+            raise serializers.ValidationError(
+                "Не допустимо подписываться самому к себе")
+        return data
