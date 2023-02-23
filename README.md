@@ -55,17 +55,31 @@ GET /api/v1/posts/ - Просмотр список десяти постов
 GET /api/v1/posts/?offset=50&limit=10 - Просмотр список десяти постов
 
 POST /api/v1/posts/ - Создание нового поста
+
 GET /api/v1/posts/{id}/ - Просмотр поста id
+
 PATCH /api/v1/posts/{id}/ - Изменение поста id
+
 PUT /api/v1/posts/{id}/ - Изменение поста id
+
 DELETE /api/v1/posts/{id}/ - Удалине поста id
+
 GET /api/v1/posts/{post_id}/comments/ - Просмотр список комментарий поста post_id
+
 POST /api/v1/posts/{post_id}/comments/ - Создание нового комментария поста post_id
+
 GET /api/v1/posts/{post_id}/comments/{id}/ - Просмотр комментария
+
 PATCH /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария
+
 PUT /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария
+
 DELETE /api/v1/posts/{post_id}/comments/{id}/ - Удаление комментария
+
 GET /api/v1/group/ - Просмотр список десяти групп
+
 GET /api/v1/group/{id}/ - Просмотр группы id
+
 GET /api/v1/follow/ - Просмотр список последователей
+
 POST /api/v1/follow/ - Подписание последователя
