@@ -49,8 +49,11 @@ python3 manage.py runserver
 ```
 
 ### Примеры запросов API:
+
 GET /api/v1/posts/ - Просмотр список десяти постов
+
 GET /api/v1/posts/?offset=50&limit=10 - Просмотр список десяти постов
+
 POST /api/v1/posts/ - Создание нового поста
 GET /api/v1/posts/{id}/ - Просмотр поста id
 PATCH /api/v1/posts/{id}/ - Изменение поста id
