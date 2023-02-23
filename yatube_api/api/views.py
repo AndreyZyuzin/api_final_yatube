@@ -1,11 +1,11 @@
 from django.core.exceptions import BadRequest
 from django.shortcuts import get_object_or_404
 from rest_framework import filters, viewsets
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 
 from posts.models import Group, Post, User
-from .pagination import PostsPagination
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
                           PostSerializer)
@@ -15,7 +15,7 @@ class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly,)
-    pagination_class = PostsPagination
+    pagination_class = LimitOffsetPagination
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
