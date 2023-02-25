@@ -147,7 +147,7 @@ python3 manage.py runserver
 
 <details>
 <summary><strong>PUT /api/v1/posts/{id}/</strong> - Изменение поста id</summary>
-```
+<pre>
 {
   "id": 0,
   "author": "string",
@@ -156,97 +156,145 @@ python3 manage.py runserver
   "image": "string",
   "group": 0
 }
-```
+</pre>
+</details>  
+
+
+**DELETE /api/v1/posts/{id}/** - Удалине поста id
+
+<details>
+<summary><strong>GET /api/v1/posts/{post_id}/comments/</strong> - Просмотр список комментарий поста post_id</summary>
+<pre>
+[
+  {
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "created": "2019-08-24T14:15:22Z",
+    "post": 0
+  },
+  
+  ...
+  
+]
+</pre>
 </details>  
 
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>POST /api/v1/posts/{post_id}/comments/</strong> - Создание нового комментария поста post_id</summary>
 <pre>
-
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
+}
 </pre>
 </details>  
-DELETE /api/v1/posts/{id}/ - Удалине поста id
+
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>GET /api/v1/posts/{post_id}/comments/{id}/</strong> - Просмотр комментария</summary>
 <pre>
-
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
+}
 </pre>
 </details>  
-GET /api/v1/posts/{post_id}/comments/ - Просмотр список комментарий поста post_id
+
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>PATCH /api/v1/posts/{post_id}/comments/{id}/</strong> - Изменение комментария</summary>
 <pre>
-
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
+}
 </pre>
 </details>  
-POST /api/v1/posts/{post_id}/comments/ - Создание нового комментария поста post_id
+
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>PUT /api/v1/posts/{post_id}/comments/{id}/</strong> - Изменение комментария</summary>
 <pre>
-
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
+}
 </pre>
 </details>  
-GET /api/v1/posts/{post_id}/comments/{id}/ - Просмотр комментария
+
+  
+**DELETE /api/v1/posts/{post_id}/comments/{id}/** - Удаление комментария
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>GET /api/v1/group/</strong> - Просмотр список десяти групп</summary>
 <pre>
-
+[
+  {
+    "id": 0,
+    "title": "string",
+    "slug": "string",
+    "description": "string"
+  },
+  
+  ...
+  
+]
 </pre>
 </details>  
-PATCH /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария
+
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>GET /api/v1/group/{id}/</strong> - Просмотр группы id</summary>
 <pre>
-
+{
+  "id": 0,
+  "title": "string",
+  "slug": "string",
+  "description": "string"
+}
 </pre>
 </details>  
-PUT /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария
+
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>GET /api/v1/follow/</strong> - Просмотр список последователей</summary>
 <pre>
-
+[
+  {
+    "user": "string",
+    "following": "string"
+  },
+  
+  ...
+  
+]
 </pre>
 </details>  
-DELETE /api/v1/posts/{post_id}/comments/{id}/ - Удаление комментария
+
 
 <details>
-<summary><strong></strong></summary>
+<summary><strong>POST /api/v1/follow/</strong> - Подписание последователя</summary>
 <pre>
-
+{
+  "user": "string",
+  "following": "string"
+}
 </pre>
 </details>  
-GET /api/v1/group/ - Просмотр список десяти групп
-
-<details>
-<summary><strong></strong></summary>
-<pre>
-
-</pre>
-</details>  
-GET /api/v1/group/{id}/ - Просмотр группы id
-
-<details>
-<summary><strong></strong></summary>
-<pre>
-
-</pre>
-</details>  
-GET /api/v1/follow/ - Просмотр список последователей
-
-<details>
-<summary><strong></strong></summary>
-<pre>
-
-</pre>
-</details>  
-POST /api/v1/follow/ - Подписание последователя
 
 ### Автор.
 Выполнено **Зюзиным Андреем** в качестве проектного задания Яндекс.Практикум
