@@ -56,8 +56,8 @@ python3 manage.py runserver
 ### Примеры запросов API:
 
 <details>
-<summary>**GET /api/v1/posts/** - Просмотр список десяти постов</summary>
-```
+<summary><strong>GET /api/v1/posts/<strong> - Просмотр список десяти постов</summary>
+<pre>
 {
   "count": 123,
   "next": "http://api.example.org/accounts/?offset=400&limit=100",
@@ -73,7 +73,7 @@ python3 manage.py runserver
     }
   ]
 }
-```
+</pre>
 </details>  
 
 GET /api/v1/posts/?offset=50&limit=10 - Просмотр список десяти постов
