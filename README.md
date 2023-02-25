@@ -77,7 +77,7 @@ python3 manage.py runserver
 </details>  
 
 <details>
-<summary><strong>GET GET /api/v1/posts/?offset=50&limit=10</strong> - Просмотр список десяти постов</summary>
+<summary><strong>GET /api/v1/posts/?offset=50&limit=10</strong> - Просмотр список десяти постов</summary>
 <pre>
 {
   "count": 123,
@@ -100,34 +100,152 @@ python3 manage.py runserver
 </pre>
 </details>  
 
-POST /api/v1/posts/ - Создание нового поста
+<details>
+<summary><strong>POST /api/v1/posts/</strong> - Создание нового поста</summary>
+<pre>
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
+}
+</pre>
+</details>  
 
-GET /api/v1/posts/{id}/ - Просмотр поста id
 
-PATCH /api/v1/posts/{id}/ - Изменение поста id
+<details>
+<summary><strong>GET /api/v1/posts/{id}/</strong> - Просмотр поста id</summary>
+<pre>
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
+}
+</pre>
+</details>  
 
-PUT /api/v1/posts/{id}/ - Изменение поста id
 
+<details>
+<summary><strong>PATCH /api/v1/posts/{id}/</strong> - Изменение поста id</summary>
+<pre>
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
+}
+</pre>
+</details>  
+
+
+<details>
+<summary><strong>PUT /api/v1/posts/{id}/</strong> - Изменение поста id</summary>
+'
+{
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
+}
+'
+</details>  
+
+
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 DELETE /api/v1/posts/{id}/ - Удалине поста id
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 GET /api/v1/posts/{post_id}/comments/ - Просмотр список комментарий поста post_id
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 POST /api/v1/posts/{post_id}/comments/ - Создание нового комментария поста post_id
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 GET /api/v1/posts/{post_id}/comments/{id}/ - Просмотр комментария
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 PATCH /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 PUT /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 DELETE /api/v1/posts/{post_id}/comments/{id}/ - Удаление комментария
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 GET /api/v1/group/ - Просмотр список десяти групп
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 GET /api/v1/group/{id}/ - Просмотр группы id
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 GET /api/v1/follow/ - Просмотр список последователей
 
+<details>
+<summary><strong></strong></summary>
+<pre>
+
+</pre>
+</details>  
 POST /api/v1/follow/ - Подписание последователя
 
 ### Автор.
