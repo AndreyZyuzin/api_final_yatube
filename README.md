@@ -147,7 +147,7 @@ python3 manage.py runserver
 
 <details>
 <summary><strong>PUT /api/v1/posts/{id}/</strong> - Изменение поста id</summary>
-```json
+```python
 {
   "id": 0,
   "author": "string",
