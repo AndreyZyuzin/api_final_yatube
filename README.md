@@ -56,7 +56,7 @@ python3 manage.py runserver
 ### Примеры запросов API:
 
 <details>
-<summary><strong>GET /api/v1/posts/</strong> - Просмотр список постов</summary>
+<summary><strong>GET</strong> /api/v1/posts/ - Просмотр список постов</summary>
 <pre>
 {
   [
@@ -77,7 +77,7 @@ python3 manage.py runserver
 </details>  
 
 <details>
-<summary><strong>GET /api/v1/posts/?offset=50&limit=10</strong> - Просмотр список десяти постов</summary>
+<summary><strong>GET</strong> /api/v1/posts/?offset=50&limit=10 - Просмотр список десяти постов</summary>
 <pre>
 {
   "count": 123,
@@ -101,7 +101,7 @@ python3 manage.py runserver
 </details>  
 
 <details>
-<summary><strong>POST /api/v1/posts/</strong> - Создание нового поста</summary>
+<summary><strong>POST</strong> /api/v1/posts/ - Создание нового поста</summary>
 <pre>
 {
   "id": 0,
@@ -116,7 +116,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>GET /api/v1/posts/{id}/</strong> - Просмотр поста id</summary>
+<summary><strong>GET</strong> /api/v1/posts/{id}/ - Просмотр поста id</summary>
 <pre>
 {
   "id": 0,
@@ -131,7 +131,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>PATCH /api/v1/posts/{id}/</strong> - Изменение поста id</summary>
+<summary><strong>PATCH</strong> /api/v1/posts/{id}/ - Изменение поста id</summary>
 <pre>
 {
   "id": 0,
@@ -146,7 +146,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>PUT /api/v1/posts/{id}/</strong> - Изменение поста id</summary>
+<summary><strong>PUT</strong> /api/v1/posts/{id}/ - Изменение поста id</summary>
 <pre>
 {
   "id": 0,
@@ -160,10 +160,10 @@ python3 manage.py runserver
 </details>  
 
 
-**DELETE /api/v1/posts/{id}/** - Удалине поста id
+**DELETE** /api/v1/posts/{id}/ - Удалине поста id
 
 <details>
-<summary><strong>GET /api/v1/posts/{post_id}/comments/</strong> - Просмотр список комментарий поста post_id</summary>
+<summary><strong>GET</strong> /api/v1/posts/{post_id}/comments/ - Просмотр список комментарий поста post_id</summary>
 <pre>
 [
   {
@@ -182,7 +182,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>POST /api/v1/posts/{post_id}/comments/</strong> - Создание нового комментария поста post_id</summary>
+<summary><strong>POST</strong> /api/v1/posts/{post_id}/comments/ - Создание нового комментария поста post_id</summary>
 <pre>
 {
   "id": 0,
@@ -196,7 +196,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>GET /api/v1/posts/{post_id}/comments/{id}/</strong> - Просмотр комментария</summary>
+<summary><strong>GET</strong> /api/v1/posts/{post_id}/comments/{id}/ - Просмотр комментария</summary>
 <pre>
 {
   "id": 0,
@@ -210,7 +210,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>PATCH /api/v1/posts/{post_id}/comments/{id}/</strong> - Изменение комментария</summary>
+<summary><strong>PATCH</strong> /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария</summary>
 <pre>
 {
   "id": 0,
@@ -224,7 +224,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>PUT /api/v1/posts/{post_id}/comments/{id}/</strong> - Изменение комментария</summary>
+<summary><strong>PUT</strong> /api/v1/posts/{post_id}/comments/{id}/ - Изменение комментария</summary>
 <pre>
 {
   "id": 0,
@@ -237,10 +237,10 @@ python3 manage.py runserver
 </details>  
 
   
-**DELETE /api/v1/posts/{post_id}/comments/{id}/** - Удаление комментария
+**DELETE** /api/v1/posts/{post_id}/comments/{id}/ - Удаление комментария
 
 <details>
-<summary><strong>GET /api/v1/group/</strong> - Просмотр список десяти групп</summary>
+<summary><strong>GET</strong> /api/v1/group/ - Просмотр список десяти групп</summary>
 <pre>
 [
   {
@@ -258,7 +258,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>GET /api/v1/group/{id}/</strong> - Просмотр группы id</summary>
+<summary><strong>GET</strong> /api/v1/group/{id}/ - Просмотр группы id</summary>
 <pre>
 {
   "id": 0,
@@ -271,7 +271,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>GET /api/v1/follow/</strong> - Просмотр список последователей</summary>
+<summary><strong>GET</strong> /api/v1/follow/ - Просмотр список последователей</summary>
 <pre>
 [
   {
@@ -287,7 +287,7 @@ python3 manage.py runserver
 
 
 <details>
-<summary><strong>POST /api/v1/follow/</strong> - Подписание последователя</summary>
+<summary><strong>POST</strong> /api/v1/follow/ - Подписание последователя</summary>
 <pre>
 {
   "user": "string",
